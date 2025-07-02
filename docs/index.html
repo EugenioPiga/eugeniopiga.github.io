@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eugenio Piga</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --link: #0645ad;
+    }
+    [data-theme="dark"] {
+      --bg: #111111;
+      --fg: #eeeeee;
+      --link: #4ea1f3;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: Georgia, serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: var(--link);
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .bio img.profile-pic {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      float: right;
+      margin: 0 0 1em 1em;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: var(--fg);
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+    .social-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: var(--link);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme) document.documentElement.setAttribute("data-theme", currentTheme);
+      toggle.addEventListener("click", () => {
+        const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Eugenio Piga</div>
+    <nav>
+      <a href="index.html">Bio</a>
+      <a href="papers.html">Working Papers</a>
+      <a href="code.html">Code</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="experience.html">Experience</a>
+      <button id="theme-toggle">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bio">
+      <img src="profile.jpg" alt="Eugenio Piga" class="profile-pic" />
+      <h1>Welcome</h1>
+      <p>I am a PhD student in Economics at UC San Diego. My work focuses on the intersection of macroeconomics and machine learning, with a particular interest in technology and firm behavior.</p>
+      <p><a href="cv_eugenio_piga.pdf" target="_blank">Download CV (PDF)</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="mailto:epiga@ucsd.edu">📧 Gmail</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">🐦 Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/yourhandle" target="_blank">🐙 GitHub</a>
+    </div>
+    <p>© 2025 Eugenio Piga</p>
+  </footer>
+</body>
+</html>
