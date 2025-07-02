@@ -1,121 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eugenio Piga</title>
-  <style>
-    :root {
-      --bg: #fdfdfd;
-      --fg: #1c1c1c;
-      --link: #0056cc;
-      --accent: #009688;
-    }
-    [data-theme="dark"] {
-      --bg: #101010;
-      --fg: #f0f0f0;
-      --link: #64b5f6;
-      --accent: #4db6ac;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: 'Helvetica Neue', Roboto, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      transition: background 0.3s, color 0.3s;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1em;
-      margin-bottom: 2rem;
-    }
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: var(--link);
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    #theme-toggle {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      margin-left: 15px;
-    }
-    .bio img.profile-pic {
-      width: 160px;
-      border-radius: 10px;
-      float: right;
-      margin: 0 0 1em 1em;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: var(--accent);
-    }
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
-      text-align: center;
-    }
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: var(--link);
-      font-weight: 500;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("theme-toggle");
-      const currentTheme = localStorage.getItem("theme");
-      if (currentTheme) document.documentElement.setAttribute("data-theme", currentTheme);
-      toggle.addEventListener("click", () => {
-        const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <div class="logo">Eugenio Piga</div>
-    <nav>
-      <a href="index.html">Bio</a>
-      <a href="papers.html">Working Papers</a>
-      <a href="code.html">Code</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="experience.html">Experience</a>
-      <button id="theme-toggle">🌗</button>
-    </nav>
+    <div class="nav-container">
+      <div class="logo">Eugenio Piga</div>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="papers.html">Working Papers</a>
+        <a href="code.html">Code</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="experience.html">Experience</a>
+        <button id="theme-toggle">🌗</button>
+      </nav>
+    </div>
   </header>
-
   <main>
     <section class="bio">
       <img src="profile.jpg" alt="Eugenio Piga" class="profile-pic" />
       <h1>Welcome</h1>
-      <p>I am a PhD student in Economics at UC San Diego. My work bridges macroeconomic modeling and machine learning, with a focus on uncertainty, prediction, and market frictions in the data economy.</p>
-      <p>Currently, I study how predictive technologies and granular data reshape firm-level markups, informational spillovers, and macroeconomic volatility.</p>
+      <p>I am a PhD student in Economics at UC San Diego. My work focuses on the intersection of macroeconomics and machine learning, with a particular interest in micro-founded models of uncertainty and firm behavior.</p>
+      <p>Currently, I am studying how predictive technologies and consumer data reshape firm markups, uncertainty, and input allocation across the economy.</p>
       <p><a href="cv_eugenio_piga.pdf" target="_blank">Download CV (PDF)</a></p>
     </section>
   </main>
-
   <footer>
     <div class="social-links">
       <a href="mailto:epiga@ucsd.edu">📧 Gmail</a>
