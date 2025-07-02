@@ -31,9 +31,10 @@ header {
 }
 
 .logo {
-  font-size: 1.75rem;
+  font-size: 2.50rem;
   font-weight: 600;
   color: var(--accent);
+  align-items: center;
 }
 
 nav a {
@@ -54,7 +55,7 @@ main {
 }
 
 .profile-pic {
-  max-width: 160px;
+  max-width: 210px;
   border-radius: 50%;
   margin-bottom: 1.5rem;
   display: block;
@@ -91,26 +92,27 @@ footer a:hover {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 0.5rem;
-  }
-
-  nav a {
-    margin: 0.5rem 0.5rem 0 0;
+    align-items: center; /* <-- this centers your name and nav */
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;         /* <-- increase font size */
+    text-align: center;      /* <-- center text */
+    width: 100%;             /* <-- optional for centering */
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* <-- center nav items too */
   }
 
   .profile-pic {
-    max-width: 130px;
+    max-width: 160px;         /* <-- slightly bigger photo */
   }
 
   .bio h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
