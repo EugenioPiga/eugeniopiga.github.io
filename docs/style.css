@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
-  --bg: #f9fafb;
-  --text: #1e293b;
-  --accent: #3b82f6;
+  --bg: #ffffff;
+  --text: #1e1e1e;
+  --accent: #1f4cff;
   --bg-dark: #0f172a;
-  --text-dark: #f1f5f9;
+  --text-dark: #f3f4f6;
   --accent-dark: #60a5fa;
   --card-bg: #ffffff;
   --card-bg-dark: #1e293b;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow: rgba(0, 0, 0, 0.05);
   --shadow-dark: rgba(255, 255, 255, 0.05);
 }
 
@@ -33,13 +33,14 @@ body {
   color: var(--text);
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 header {
   background: var(--bg);
   border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,21 +51,22 @@ header {
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--accent);
+  letter-spacing: -0.5px;
 }
 
 nav a, nav button {
-  margin-left: 1rem;
+  margin-left: 1.2rem;
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
-  transition: all 0.3s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
 }
 
 nav a:hover, nav button:hover {
@@ -72,20 +74,20 @@ nav a:hover, nav button:hover {
 }
 
 main {
-  max-width: 900px;
+  max-width: 800px;
   margin: 3rem auto;
   padding: 0 1.5rem;
 }
 
 .profile-pic {
-  max-width: 160px;
+  max-width: 180px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.7rem;
   box-shadow: 0 6px 12px var(--shadow);
   transition: transform 0.3s ease;
 }
 .profile-pic:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 section.bio {
@@ -93,18 +95,49 @@ section.bio {
   animation: fadeIn 1s ease-in-out;
 }
 
+.bio h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.bio p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 1.2rem auto;
+  color: var(--text);
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.cv-link:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 3rem;
   border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
 }
 
 footer a {
   margin: 0 0.6rem;
   color: var(--text);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: color 0.2s ease;
 }
 
