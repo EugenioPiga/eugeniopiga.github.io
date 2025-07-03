@@ -1,10 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
   --bg: #ffffff;
   --text: #111827;
   --accent: #1f2937;
+  --header-bg: #f9fafb; /* subtle elegant color */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -21,8 +22,9 @@ body {
 }
 
 header {
-  background: var(--bg);
+  background: var(--header-bg);
   border-bottom: 1px solid #e5e7eb;
+  box-shadow: var(--shadow);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
