@@ -137,3 +137,13 @@ footer a:hover {
     font-size: 2rem;
   }
 }
+
+main a {
+  color: var(--text);           /* Use the same dark color as body text */
+  text-decoration: none;       /* Remove underline */
+  font-weight: 600;            /* Optional: makes the link look like a heading */
+}
+
+main a:hover {
+  text-decoration: underline;  /* Underline on hover for clarity */
+}
