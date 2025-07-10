@@ -5,44 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eugenio Piga</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <div class="logo">Eugenio Piga</div>
       <nav>
-        <a data-target="bio">Bio</a>
-        <a data-target="research">Research</a>
-        <a data-target="code">Code</a>
-        <a data-target="teaching">Teaching</a>
+        <a href="index.html">Bio</a>
+        <a href="research.html">Research</a>
+        <a href="code.html">Code</a>
+        <a href="teaching.html">Teaching</a>
       </nav>
     </div>
   </header>
-
   <main>
-    <section id="bio" class="content-section active bio">
+    <section class="bio">
       <img src="profile.jpg" alt="Eugenio Piga" class="profile-pic" />
       <h1>Welcome</h1>
       <p>I am a PhD student in Economics at the University of California, San Diego.</p>
       <p>My work focuses on the intersection of macroeconomics and machine learning.</p>
     </section>
-
-    <section id="research" class="content-section">
-      <h1>Research</h1>
-      <p>Details about my research projects and publications.</p>
-    </section>
-
-    <section id="code" class="content-section">
-      <h1>Code</h1>
-      <p>Examples of my programming work and open-source contributions.</p>
-    </section>
-
-    <section id="teaching" class="content-section">
-      <h1>Teaching</h1>
-      <p>Courses I've taught or assisted with and materials.</p>
-    </section>
   </main>
-
   <footer>
     <div class="social-links">
       <a href="mailto:epiga@ucsd.edu">Email</a>
@@ -52,26 +36,5 @@
     </div>
     <p>© 2025 Eugenio Piga</p>
   </footer>
-
-  <script>
-    const links = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('.content-section');
-
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('data-target');
-
-        sections.forEach(section => {
-          section.classList.remove('active');
-        });
-
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
-</html>
+</html> 
