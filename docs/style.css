@@ -56,6 +56,7 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  cursor: pointer;
 }
 
 nav a:hover {
@@ -66,6 +67,8 @@ main {
   max-width: 800px;
   margin: 3rem auto;
   padding: 0 1.5rem;
+  position: relative;
+  min-height: 300px;
 }
 
 .profile-pic {
@@ -104,6 +107,36 @@ footer a:hover {
   text-decoration: underline;
 }
 
+main a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Animated section transitions */
+.content-section {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.content-section.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+  position: relative;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -139,14 +172,4 @@ footer a:hover {
   .bio h1 {
     font-size: 2rem;
   }
-}
-
-main a {
-  color: var(--text);           /* Use the same dark color as body text */
-  text-decoration: none;       /* Remove underline */
-  font-weight: 600;            /* Optional: makes the link look like a heading */
-}
-
-main a:hover {
-  text-decoration: underline;  /* Underline on hover for clarity */
 }
