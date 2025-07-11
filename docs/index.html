@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eugenio Piga</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -19,6 +23,7 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section class="bio">
       <img src="profile.jpg" alt="Eugenio Piga" class="profile-pic" />
@@ -27,6 +32,7 @@
       <p>My work focuses on the intersection of macroeconomics and machine learning.</p>
     </section>
   </main>
+
   <footer>
     <div class="social-links">
       <a href="mailto:epiga@ucsd.edu">Email</a>
@@ -37,4 +43,4 @@
     <p>© 2025 Eugenio Piga</p>
   </footer>
 </body>
-</html> 
+</html>
