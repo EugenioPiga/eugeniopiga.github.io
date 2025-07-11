@@ -4,7 +4,7 @@
   --bg: #ffffff;
   --text: #111827;
   --accent: #1f2937;
-  --header-bg: white;
+  --header-bg: #f9f7f2;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -19,14 +19,18 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  opacity: 0; /* Start hidden for fade-in */
-  transition: opacity 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.fade-in {
+  opacity: 1;
 }
 
 header {
   background: var(--header-bg);
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
@@ -47,10 +51,9 @@ nav {
 }
 
 .logo {
-  font-size: 2.50rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--accent);
-  align-items: center;
 }
 
 nav a {
@@ -91,7 +94,7 @@ main {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
   border-top: 1px solid #e5e7eb;
   font-size: 0.95rem;
 }
@@ -151,14 +154,4 @@ main a {
 
 main a:hover {
   text-decoration: underline;
-}
-
-/* Fade transition classes */
-.fade-in {
-  opacity: 1 !important;
-}
-
-.fade-out {
-  opacity: 0 !important;
-  transition: opacity 0.5s ease;
 }
