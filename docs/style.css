@@ -19,6 +19,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  opacity: 0; /* Start hidden for fade-in */
+  transition: opacity 0.5s ease;
 }
 
 header {
@@ -142,11 +144,21 @@ footer a:hover {
 }
 
 main a {
-  color: var(--text);           /* Use the same dark color as body text */
-  text-decoration: none;       /* Remove underline */
-  font-weight: 600;            /* Optional: makes the link look like a heading */
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 main a:hover {
-  text-decoration: underline;  /* Underline on hover for clarity */
+  text-decoration: underline;
+}
+
+/* Fade transition classes */
+.fade-in {
+  opacity: 1 !important;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease;
 }
