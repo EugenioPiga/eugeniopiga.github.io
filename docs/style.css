@@ -4,7 +4,7 @@
   --bg: #ffffff;
   --text: #111827;
   --accent: #1f2937;
-  --header-bg: #f9f7f2;
+  --header-bg: #f5f3eb; /* soft beige */
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -20,7 +20,7 @@ body {
   padding: 0;
   line-height: 1.6;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.6s ease;
 }
 
 body.fade-in {
@@ -54,6 +54,7 @@ nav {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--accent);
+  align-items: center;
 }
 
 nav a {
@@ -109,6 +110,16 @@ footer a:hover {
   text-decoration: underline;
 }
 
+main a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -144,14 +155,4 @@ footer a:hover {
   .bio h1 {
     font-size: 2rem;
   }
-}
-
-main a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-main a:hover {
-  text-decoration: underline;
 }
