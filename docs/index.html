@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eugenio Piga</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    // Add fade-in effect on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('fade-in');
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -43,5 +37,27 @@
     </div>
     <p>© 2025 Eugenio Piga</p>
   </footer>
+
+  <script>
+    // on page load, fade in
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // intercept nav clicks, fade out, then navigate
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600); // match CSS transition duration
+      });
+    });
+  </script>
 </body>
 </html>
