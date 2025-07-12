@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eugenio Piga – Teaching</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('fade-in');
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -34,11 +29,33 @@
   <footer>
     <div class="social-links">
       <a href="mailto:epiga@ucsd.edu">Email</a>
-      <a href="https://x.com/EugenioPiga" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/in/eugeniopiga/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/EugenioPiga" target="_blank">GitHub</a>
+      <a href="https://x.com/EugenioPiga" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://www.linkedin.com/in/eugeniopiga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/EugenioPiga" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
     <p>© 2025 Eugenio Piga</p>
   </footer>
+
+  <script>
+    // Fade in on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    // Fade out on nav click, then navigate
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600); // matches CSS transition duration
+      });
+    });
+  </script>
 </body>
 </html>
