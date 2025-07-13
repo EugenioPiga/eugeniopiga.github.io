@@ -37,27 +37,6 @@
     </div>
     <p>© 2025 Eugenio Piga</p>
   </footer>
-
-  <script>
-    // on page load, fade in
-    window.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('fade-in');
-    });
-
-    // intercept nav clicks, fade out, then navigate
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const href = link.getAttribute('href');
-
-        document.body.classList.remove('fade-in');
-        document.body.classList.add('fade-out');
-
-        setTimeout(() => {
-          window.location.href = href;
-        }, 300); // match CSS transition duration
-      });
-    });
-  </script>
+  
 </body>
 </html>
