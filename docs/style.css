@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+cat > docs/style.css <<'EOF'
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #ffffff;
-  --text: #111827;
-  --accent: #1f2937;
-  --header-bg: #f5f3eb; /* soft beige */
-  --shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #1d4ed8;
+  --header-bg: #ffffff;
+  --line: #e2e8f0;
+  --shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
 }
 
 * {
@@ -13,140 +17,185 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
 }
 
 header {
   background: var(--header-bg);
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: var(--shadow);
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--accent);
-  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 nav {
-  margin-left: auto;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
 }
 
 nav a {
-  margin-left: 1.2rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--muted);
   font-weight: 500;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav a[aria-current='page'] {
+  color: var(--accent);
 }
 
 main {
-  max-width: 800px;
-  margin: 3rem auto;
+  max-width: 900px;
+  margin: 2.5rem auto;
   padding: 0 1.5rem;
 }
 
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem 1.6rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.4rem;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.8rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.45rem;
+}
+
 .profile-pic {
-  max-width: 210px;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.2rem;
+  border: 4px solid #eff6ff;
 }
 
 .bio {
   text-align: center;
 }
 
-.bio h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.contact-line {
+  margin-top: 0.9rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--accent);
 }
 
 footer {
   text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: var(--shadow);
-  border-top: 1px solid #e5e7eb;
+  padding: 1.6rem 1rem 2rem;
+  border-top: 1px solid var(--line);
   font-size: 0.95rem;
+  background: #fff;
+}
+
+.social-links {
+  margin-bottom: 0.45rem;
 }
 
 footer a {
-  margin: 0 0.6rem;
-  color: var(--text);
   text-decoration: none;
+  margin: 0 0.55rem;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-main a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-main a:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .nav-container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .logo {
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
   }
 
-  nav {
-    margin-left: 0;
-    justify-content: center;
-    flex-wrap: wrap;
+  main {
+    margin-top: 1.6rem;
   }
 
-  nav a {
-    margin: 0.5rem;
-  }
-
-  .profile-pic {
-    max-width: 160px;
-  }
-
-  .bio h1 {
-    font-size: 2rem;
+  h1 {
+    font-size: 1.7rem;
   }
 }
+
+.hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+.button:hover {
+  opacity: 0.92;
+}
+
+.button-secondary {
+  background: #fff;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+EOF
