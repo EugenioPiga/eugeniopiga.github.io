@@ -1,0 +1,6 @@
+cat > docs/robots.txt <<'EOF'
+User-agent: *
+Allow: /
+
+Sitemap: https://eugeniopiga.github.io/sitemap.xml
+EOF

@@ -1,18 +1,48 @@
+cat > docs/index.html <<'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eugenio Piga</title>
+  <title>Eugenio Piga | Ph.D. Student in Economics at UC San Diego</title>
+  <meta name="description" content="Eugenio Piga is a Ph.D. student in Economics at UC San Diego. Research interests include the economics of artificial intelligence, macroeconomics, and labor economics." />
+  <meta name="keywords" content="Eugenio Piga, economics, UCSD, PhD student, macroeconomics, artificial intelligence, labor economics" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://eugeniopiga.github.io/" />
+  <meta property="og:title" content="Eugenio Piga | Economics Ph.D. Student" />
+  <meta property="og:description" content="Ph.D. student in Economics at UC San Diego studying AI, macroeconomics, and labor economics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://eugeniopiga.github.io/" />
+  <meta property="og:image" content="https://eugeniopiga.github.io/docs/profile.jpg" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eugenio Piga",
+      "jobTitle": "Ph.D. Student in Economics",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of California, San Diego"
+      },
+      "email": "mailto:epiga@ucsd.edu",
+      "url": "https://eugeniopiga.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/eugeniopiga/",
+        "https://github.com/EugenioPiga",
+        "https://x.com/EugenioPiga"
+      ]
+    }
+  </script>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <div class="logo">Eugenio Piga</div>
       <nav>
-        <a href="index.html">Bio</a>
+        <a href="index.html" aria-current="page">Bio</a>
         <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
         <a href="code.html">Code</a>
         <a href="teaching.html">Teaching</a>
         <a href="experience.html">Experience</a>
@@ -21,23 +51,43 @@
   </header>
 
   <main>
-    <section class="bio">
-      <img src="profile.jpg" alt="Eugenio Piga" class="profile-pic" />
-      <h1>Welcome</h1>
-      <p>I am a PhD student in Economics at the University of California, San Diego.</p>
-      <p>My work focuses on macroeconomics, firm dynamics, and machine learning.</p>
+    <section class="bio card">
+      <img src="profile.jpg" alt="Portrait of Eugenio Piga" class="profile-pic" />
+      <h1>Eugenio Piga</h1>
+      <p class="lead">I am a Ph.D. student in Economics at the University of California, San Diego.</p>
+      <p>
+        My research interests are in the economics of artificial intelligence, macroeconomics, and labor economics,
+        with a focus on how technological change reshapes firms and workers.
+      </p>
+      <p>
+        Prior to UCSD, I worked as a pre-doctoral research associate at INSEAD and Bocconi University.
+      </p>
+      <p class="contact-line"><strong>Email:</strong> <a href="mailto:epiga@ucsd.edu">epiga@ucsd.edu</a></p>
+      <div class="hero-actions">
+        <a class="button" href="research.html">View Research</a>
+        <a class="button button-secondary" href="cv.html">Open CV</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Recent News</h2>
+      <ul>
+        <li>Participated in the <a href="https://www.chicagobooth.edu/research/center-for-applied-artificial-intelligence/opportunities/event---aiesi" target="_blank" rel="noopener noreferrer">AI+Economics Summer Institute</a> at the University of Chicago (2025).</li>
+        <li>Presented work at the Machine Learning in Economics Summer Conference (2025).</li>
+        <li>Attended the NBER Annual Conference on Macroeconomics (2023).</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <div class="social-links">
       <a href="mailto:epiga@ucsd.edu">Email</a>
-      <a href="https://x.com/EugenioPiga" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/in/eugeniopiga/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/EugenioPiga" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/eugeniopiga/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/EugenioPiga" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://x.com/EugenioPiga" target="_blank" rel="noopener noreferrer">Twitter</a>
     </div>
-    <p>© 2025 Eugenio Piga</p>
+    <p>© 2026 Eugenio Piga</p>
   </footer>
-  
 </body>
 </html>
+EOF
