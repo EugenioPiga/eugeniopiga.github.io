@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eugenio Piga | CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cv-wrap { display: grid; gap: 1rem; }
+    .cv-frame {
+      width: 100%;
+      min-height: 78vh;
+      border: 1px solid #dcded8;
+      background: #fff;
+    }
+    .cv-actions { display: flex; gap: .8rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Eugenio Piga</div>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html" aria-current="page">CV</a>
+        <a href="code.html">Code</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="experience.html">Experience</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Curriculum Vitae</h1>
+      <div class="cv-wrap">
+        <div class="cv-actions">
+          <a class="button" href="Eugenio_Piga_CV.pdf" target="_blank" rel="noopener noreferrer">Open in New Tab</a>
+          <a class="button button-secondary" href="Eugenio_Piga_CV.pdf" download>Download PDF</a>
+        </div>
+        <object class="cv-frame" data="Eugenio_Piga_CV.pdf" type="application/pdf">
+          <p>Your browser cannot display the PDF. <a href="Eugenio_Piga_CV.pdf" target="_blank" rel="noopener noreferrer">Open CV</a>.</p>
+        </object>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
