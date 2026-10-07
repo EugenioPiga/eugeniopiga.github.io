@@ -64,8 +64,8 @@ for title,info,date in [
 ('Prices and Markets','INSEAD · MBA TA · Timothy Van Zandt','2022-2023'),
 ('Theory of Finance','Bocconi University · Graduate TA · Carlo Favero and Claudio Tebaldi','2020-2021')]: entry(title,info,date)
 section('Presentations and conference participation')
-story.append(p('<b>Upcoming presentations:</b> CODE@MIT, poster and flash talk (November 2026); UC San Diego Macro and Labor workshops (October 2026).'))
-story.append(p('<b>2026:</b> Atkinson Conference on Economic and Social Inequality, Nuffield College, Oxford (presentation); AI &amp; Economics Summer Conference, University of Chicago (presentation); UC San Diego Macro Seminar Series; JIE Summer School in International Economics, Bocconi University (attendance).'))
+story.append(p('<b>Upcoming presentations:</b> CODE@MIT, presentation (November 2026); UC San Diego Macro and Labor workshops (October 2026).'))
+story.append(p('<b>2026:</b> Atkinson Conference on Economic and Social Inequality, Nuffield College, Oxford (presentation); AI &amp; Economics Summer Conference, University of Chicago (presentation); UC San Diego Macro Workshops; JIE Summer School in International Economics, Bocconi University (attendance).'))
 story.append(p('<b>2025:</b> AI+Economics Summer Institute and Machine Learning in Economics Summer Conference, University of Chicago (participation).'))
 story.append(p('<b>2023:</b> NBER 38th Annual Conference on Macroeconomics; XVIII Seminario Internacional del Boletín Informativo Techint.'))
 section('Awards and honors')
