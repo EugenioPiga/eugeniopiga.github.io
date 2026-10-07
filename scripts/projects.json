@@ -1,0 +1,30 @@
+[
+  {
+    "id": "screening",
+    "title": "Agentic Screening in Equilibrium",
+    "authors": "with Brian Jabarian, Mariya Pominova, and Pëllumb Reshidi",
+    "tag": "Artificial intelligence · Labor markets",
+    "description": "How does AI screening change hiring when firms compete for workers? We combine a randomized experiment with approximately 70,000 applicants in the Philippines and a model of competing firms to study screening, the similarity of evaluations, and the equilibrium effects of AI adoption."
+  },
+  {
+    "id": "learning",
+    "title": "AI, Firm Learning, and Internal Labor Markets",
+    "authors": "",
+    "tag": "Artificial intelligence · Organizational economics",
+    "description": "I study how better prediction technologies change what firms learn about their workers and how that information shapes promotions, separations, and wages. The project combines a model of employer learning with evidence on AI exposure and careers within firms."
+  },
+  {
+    "id": "adoption",
+    "title": "Technology Adoption across Space and Industries",
+    "authors": "",
+    "tag": "Macroeconomics · Technology diffusion",
+    "description": "Why do technologies that can be used in many places diffuse unevenly across locations and industries? I study how local adoption costs and economic structure shape technology diffusion and its aggregate and distributional effects, drawing on historical evidence from industrial technology adoption."
+  },
+  {
+    "id": "innovation",
+    "title": "The Origins of Innovation Clusters",
+    "authors": "with Gaurav Khanna and Yuhei Miyauchi",
+    "tag": "Innovation · Economic geography",
+    "description": "We use linked patent and career data to study the people, firms, and places behind innovation clusters. Current work examines inventor mobility, workplace sorting, and the role of universities in local innovation, including graduate labor supply and university–firm research links."
+  }
+]

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://eugeniopiga.github.io/sitemap.xml
