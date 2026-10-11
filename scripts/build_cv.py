@@ -34,7 +34,7 @@ def entry(title, detail='', date=''):
     story.append(KeepTogether(elements))
 
 story += [p('Eugenio Piga','name'),p('Ph.D. Student in Economics · University of California, San Diego','contact'),p('<link href="mailto:epiga@ucsd.edu" color="#185c55">epiga@ucsd.edu</link> · +1 (858) 373-8865 · <link href="https://eugeniopiga.github.io/" color="#185c55">eugeniopiga.github.io</link>','contact')]
-story.append(p('Office: Brian C. Malk Hall, E459', 'contact'))
+story.append(p('Office: Brian C. Malk Hall, E459 · 3005 Voigt Drive · La Jolla, CA 92093, USA', 'contact'))
 section('Research interests')
 story.append(p('Macroeconomics; Labor Economics; Innovation; Artificial Intelligence'))
 section('Education')
