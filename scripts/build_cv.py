@@ -34,6 +34,7 @@ def entry(title, detail='', date=''):
     story.append(KeepTogether(elements))
 
 story += [p('Eugenio Piga','name'),p('Ph.D. Student in Economics · University of California, San Diego','contact'),p('<link href="mailto:epiga@ucsd.edu" color="#185c55">epiga@ucsd.edu</link> · +1 (858) 373-8865 · <link href="https://eugeniopiga.github.io/" color="#185c55">eugeniopiga.github.io</link>','contact')]
+story.append(p('Office: Brian C. Malk Hall, E459', 'contact'))
 section('Research interests')
 story.append(p('Macroeconomics; Labor Economics; Innovation; Artificial Intelligence'))
 section('Education')
@@ -48,7 +49,7 @@ section('Publications')
 story.append(p('<b>Comment on “Bottlenecks: Sectoral Imbalances and the US Productivity Slowdown”</b><br/>with John G. Fernald. <i>NBER Macroeconomics Annual 2023</i>, Vol. 38, pp. 208-221. Published 2024. <link href="https://doi.org/10.1086/729203" color="#185c55">Article</link>'))
 story.append(p('<b>Comment on “Bottlenecks: Sectoral Imbalances and the US Productivity Slowdown”</b><br/>with Jennifer La’O. <i>NBER Macroeconomics Annual 2023</i>, Vol. 38, pp. 222-235. Published 2024. <link href="https://doi.org/10.1086/729204" color="#185c55">Article</link>'))
 section('Research positions')
-entry('Collegio Carlo Alberto','Ph.D. Visiting Student','May-Sep 2026')
+entry('Collegio Carlo Alberto','Ph.D. Visiting Student','Summer 2026')
 entry('INSEAD','Pre-doctoral Research Associate, Economics and Political Science · Fontainebleau, France','2022-2024')
 entry('Bocconi University','Pre-doctoral Research Associate, Department of Economics · Milan, Italy','2021-2022')
 entry('Bocconi University, IGIER','Visiting Student · Milan, Italy','2019-2021')
