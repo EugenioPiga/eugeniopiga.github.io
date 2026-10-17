@@ -57,11 +57,11 @@ entry('Shanghai Advanced Institute of Finance','Visiting Student · Shanghai, Ch
 story.append(PageBreak())
 section('Teaching')
 for title,info,date in [
-('LIIT 1AX - Analysis of Italian','UC San Diego · Italian language instruction · Chiara Carnelos','Fall 2026'),
+('LIIT 1AX - Analysis of Italian','UC San Diego · Italian language instruction · Chiara Carnelos','2026'),
 ('ECON 112 - Macroeconomic Data Analysis','UC San Diego · Undergraduate TA · Giacomo Rondina','2026'),
 ('ECON 86 - 10×10 Career Lessons','UC San Diego · Undergraduate TA · Marc Muendler','2026'),
-('ECON 210B - Macroeconomics','UC San Diego · Ph.D. TA · Giacomo Rondina','Winter 2026'),
-('ECON 110B - Short-Run Macroeconomics','UC San Diego · Undergraduate TA · Fabian Trottner','Fall 2025'),
+('ECON 210B - Macroeconomics','UC San Diego · Ph.D. TA · Giacomo Rondina','2026'),
+('ECON 110B - Short-Run Macroeconomics','UC San Diego · Undergraduate TA · Fabian Trottner','2025, 2026'),
 ('Business and Society','INSEAD · Graduate TA · Philippe Aghion','2022-2023'),
 ('Prices and Markets','INSEAD · MBA TA · Timothy Van Zandt','2022-2023'),
 ('Theory of Finance','Bocconi University · Graduate TA · Carlo Favero and Claudio Tebaldi','2020-2021')]: entry(title,info,date)
